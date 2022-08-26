@@ -28,7 +28,7 @@
                             <div class="col-md-12">
                                 <div class="carousel-image div-hide">
                                     @foreach($slides as $item)
-                                        <div style="height: 350px;overflow-y: hidden;background-image: url({{ $item->image_url }});display: flex;align-items: center;justify-content: center;flex-direction: column;background-size: cover;background-repeat: no-repeat">
+                                        <div style="height: 520px;overflow-y: hidden;background-image: url(@if($item->image){{ $item->getFirstMediaUrl('image') }}@endif);display: flex;align-items: center;justify-content: center;flex-direction: column; background-size: contain !important;background-repeat: no-repeat;">
                                             {{-- <img class="lozad"
                                                   data-src=""
                                                   alt="First slide"

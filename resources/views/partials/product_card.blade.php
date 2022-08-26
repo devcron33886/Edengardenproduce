@@ -3,7 +3,7 @@
         <a href="{{ route('products.details-view',$item->id) }}">
             <div style="height: 232px;overflow: hidden">
                 <img style="width: 100%"
-                     class="lozad rounded" data-src="{{ asset('uploads/products/'.$item->image) }}"
+                     class="lozad rounded" data-src="{{ $product->getFirstMediaUrl('image','preview') }}" alt="{{ $product->name }}">
                      alt="" src="">
             </div>
         </a>

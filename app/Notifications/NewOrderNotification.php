@@ -45,7 +45,7 @@ class NewOrderNotification extends Notification
         return (new MailMessage)
             ->subject('New order', )
             ->greeting('Hello there is a new order need a review')
-            ->line('New order by '.$this->order->name.' which has order number '.$this->order->order_no)
+            ->line('New order by '.$this->order->clientName.' which has order number '.$this->order->order_no)
             ->action('Review the order here', url('/admin/orders/'.$this->order->id));
             
     }

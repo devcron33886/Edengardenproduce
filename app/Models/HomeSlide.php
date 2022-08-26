@@ -44,8 +44,8 @@ class HomeSlide extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('thumb')->fit('crop', 50, 50);
-        $this->addMediaConversion('preview');
+        $this->addMediaConversion('thumb')->fit('crop', 150, 150);
+        $this->addMediaConversion('preview')->fit('crop',1920,1080);
     }
 
     public function getImageAttribute()

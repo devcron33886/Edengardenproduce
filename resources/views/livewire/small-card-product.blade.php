@@ -2,7 +2,7 @@
     <div class="product-img">
         <img class="lozad rounded-sm shadow-sm thumbnail img-responsive"
              style="width: 60px;height: 70px;object-fit: cover"
-             src="{{ asset($product->imageUrl) }}" alt="{{ $product->name }}">
+             src="{{ $product->getFirstMediaUrl('image') }}" alt="{{ $product->name }}">
     </div>
     <div class="product-body">
         <h6>

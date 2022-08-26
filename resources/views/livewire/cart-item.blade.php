@@ -1,8 +1,8 @@
 <tr wire:loading.class.delay="loading">
     <td class="hidden-xs">
         <h4>
-            <a href="{{ asset("uploads/products/" .$product->image ) }}">
-                <img src="{{ asset("uploads/products/" .$product->image ) }}"
+            <a href="{{ $product->getFirstMediaUrl('image') }}">
+                <img src="{{ $product->getFirstMediaUrl('image')}}"
                      alt="{{ $cartItem->name }}"
                      class="img-responsive img-thumbnail img-circle"
                      style="height: 50px ;width: 50px;object-fit: cover">

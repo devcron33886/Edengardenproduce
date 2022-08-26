@@ -37,7 +37,7 @@ class StoreProductRequest extends FormRequest
                 'string',
                 'required',
             ],
-            'min_stock' => [
+            'minStock' => [
                 'string',
                 'nullable',
             ],

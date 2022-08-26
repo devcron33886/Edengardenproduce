@@ -43,7 +43,7 @@ class Product extends Model implements HasMedia
         'qty',
         'price',
         'measure',
-        'min_stock',
+        'minStock',
         'status',
         'description',
         'discount',
@@ -77,7 +77,7 @@ class Product extends Model implements HasMedia
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')->fit('crop', 120, 120);
-        $this->addMediaConversion('preview');
+        $this->addMediaConversion('preview')->fit('crop',1920,1080);
     }
 
     public function category(): BelongsTo

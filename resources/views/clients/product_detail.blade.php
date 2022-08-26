@@ -46,7 +46,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <img class="img-responsive img-thumbnail rounded-sm shadow-sm"
-                             src="{{ $product->image_url }}" alt="">
+                             src="{{ $product->getFirstMediaUrl('image') }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">

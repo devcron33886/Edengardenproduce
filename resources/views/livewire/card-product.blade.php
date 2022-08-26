@@ -3,7 +3,7 @@
         <a href="{{ route('products.details-view',$product->id) }}">
             <div style="height: 232px;overflow: hidden">
                 <img style="width: 100%;height: 100%;object-fit: cover"
-                     class="rounded" src="{{ asset('uploads/products/'.$product->image) }}"
+                     class="rounded" src="{{ $product->getFirstMediaUrl('image','preview') }}" alt="{{ $product->name }}">
                      alt="">
             </div>
         </a>
