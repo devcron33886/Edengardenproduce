@@ -28,23 +28,19 @@
                         <th>
                             {{ trans('cruds.product.fields.name') }}
                         </th>
-                        <th>
-                            {{ trans('cruds.product.fields.qty') }}
-                        </th>
+                        
                         <th>
                             {{ trans('cruds.product.fields.price') }}
                         </th>
                         <th>
                             {{ trans('cruds.product.fields.measure') }}
                         </th>
-                        <th>
-                            {{ trans('cruds.product.fields.min_stock') }}
-                        </th>
+                        
                         <th>
                             {{ trans('cruds.product.fields.status') }}
                         </th>
                         <th>
-                            &nbsp;
+                            Action
                         </th>
                     </tr>
                 </thead>
@@ -58,20 +54,16 @@
                                 {{ $product->id ?? '' }}
                             </td>
                             <td>
-                                {{ $product->name ?? '' }}
+                                {{ Str::limit($product->name ?? '', 30) }}
                             </td>
+                            
                             <td>
-                                {{ $product->qty ?? '' }}
-                            </td>
-                            <td>
-                                {{ $product->price ?? '' }}
+                                {{ number_format($product->price ?? '') }} RWF
                             </td>
                             <td>
                                 {{ $product->measure ?? '' }}
                             </td>
-                            <td>
-                                {{ $product->min_stock ?? '' }}
-                            </td>
+                            
                             <td>
                                 {{ App\Models\Product::STATUS_SELECT[$product->status] ?? '' }}
                             </td>
@@ -147,7 +139,7 @@
   $.extend(true, $.fn.dataTable.defaults, {
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
-    pageLength: 100,
+    pageLength: 10,
   });
   let table = $('.datatable-Product:not(.ajaxTable)').DataTable({ buttons: dtButtons })
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){

@@ -29,9 +29,8 @@ class UpdateProductRequest extends FormRequest
             ],
             'price' => [
                 'required',
-                'integer',
-                'min:-2147483648',
-                'max:2147483647',
+                'float',
+                
             ],
             'measure' => [
                 'string',
