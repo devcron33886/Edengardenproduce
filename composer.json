@@ -13,7 +13,6 @@
         "hashids/hashids": "^4.1",
         "laravel/framework": "^9.0",
         "laravel/helpers": "^1.5",
-        "laravel/pint": "^1.1.1",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
